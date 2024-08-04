@@ -108,3 +108,20 @@ def retry(max_attempts: int, delay):
         return wrapper
 
     return decorator
+
+
+def deepcopy(func):
+    """
+    :param func: 需要传入的函数
+    :return: 传入的原函数
+
+
+    此函数用于将函数传入的参数进行深拷贝，使其不影响原值
+    """
+
+    def wrapper(*args, **kwargs):
+        args = deepcopy(args)
+        kwargs = deepcopy(kwargs)
+        return func(*args, **kwargs)
+
+    return wrapper

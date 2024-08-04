@@ -17,6 +17,3 @@ from tools.other import *
 from tools.parse import *
 from tools.request import *
 from tools.wapper import *
-
-from tools.spider_tools import SpiderTools
-from tools.cryptools import Cryptor
